@@ -1,0 +1,200 @@
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<template>
+
+<!----------------------------------------------- Page 1 ------------------------------------------------------>
+
+    <template if:true={pageOne}>
+	<div  class="container">
+		<div class="forms-container">
+			<div class="signin-signup">
+				<form action="#" class="sign-in-form">
+					<h2 class="title">Sign Up</h2>
+					<div class="input-field">
+						<i class="fas fa-user"></i>
+						<input value="" class="fname" onchange={changeHandle} type="text" placeholder="First Name"/>     <!-----------fields---------->
+					</div>
+					<div class="input-field">
+						<i class="fas fa-user"></i>
+						<input  value="" class="lname" type="text" onchange={changeHandle} placeholder="Last Name" />    <!-----------fields---------->
+					</div>
+					<div class="input-field">
+						<i class="fas fa-user"></i>
+						<input value="" class="email" type="text" onchange={changeHandle} placeholder="Email" />         <!-----------fields---------->
+					</div>
+					<div class="input-field">
+						<i class="fas fa-user"></i>
+						<input value="" class="phone" type="text" onchange={changeHandle} placeholder="Phone" />          <!-----------fields---------->
+					</div>
+					<div class="input-field">
+						<i class="fas fa-user"></i>
+                        
+						<select  onchange={changeHandle} class="dropdown">                           <!-----------fields---------->
+                            <option>---Select Gender---</option>
+                            <option value={gender}>Male</option>
+                            <option value={gender}>Female</option>
+                            <option value={gender}>Rather Not Say</option>
+                          </select>
+                          </div>  
+					<div class="input-field">
+						<i class="fas fa-user"></i>
+                        
+						<input value="" onchange={changeHandle} class="date datein" type="date" />                                   <!-----------fields---------->
+					</div>
+                    <button  class="btn solid" onclick={changePageToTwo}>Next</button>
+                    <p class="dob">Date of birth</p>
+                    </form>
+			</div>
+		</div>
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <img class="logo" src='https://svgshare.com/i/hZm.svg' title='' />
+                    <h2>
+                        Come Start Your Exciting Journey With Us!
+                    </h2>
+                    <br>
+                    <h2>
+                        Just Fill the Sign Up details and we are All Set to Sail!
+                    </h2>
+                    <br>
+                    <h3>
+                        SIGN UP NOW!
+                    </h3>
+                    
+                </div>
+                <img src='https://svgshare.com/i/h_Q.svg' title='' />
+            </div>
+        </div>
+        </div>
+    </template>
+
+
+    <!----------------------------------------------- Page 2 ------------------------------------------------------>
+
+    <template if:true={pageTwo}>
+        <div class="container">
+            <div class="forms-container">
+                <div class="signin-signup">
+                    <form action="#" class="sign-in-form">
+                        <h2 class="title">Sign Up</h2>
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input value="" class="dataForInput" type="text" placeholder="Highest Education"/>       <!-----------fields---------->
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input value="" class="dataForInput" type="text" placeholder="School/College Name" />       <!-----------fields---------->
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input value="" class="dataForInput" type="text" placeholder="Percentage/CGPA" />            <!-----------fields---------->
+                        </div>
+                        
+                        <button class="btn solid sign-up-btn bkbt" onclick={backToPageOne}>
+                            Back
+                          </button> <button  class="btn solid nxbt" onclick={changePageToThree}>Next</button>
+    
+                        </form>
+                </div>
+            </div>
+    
+            <div class="panels-container">
+                <div class="panel left-panel">
+                    <div class="content">
+                        <img class="logo" src='https://svgshare.com/i/hZm.svg' title='' />
+                        <br>
+                        <h2>
+                            Need to edit previous details again?
+                        </h2>
+                        <br>
+                        <h2>
+                            Dont worry we got you!
+                        </h2>
+                        <br>
+                        <h2>
+                            Click on the Back button to go to the previous page.
+                        </h2>
+                        <br>
+                        
+                    </div>
+                    <img src='https://svgshare.com/i/h_Q.svg' title='' />
+                </div>
+            </div>
+        </div>
+        </template>
+
+        <!----------------------------------------------- Page 3 ------------------------------------------------------>
+
+        <template if:true={pageThree}>
+            <div class="container">
+                <div class="forms-container">
+                    <div class="signin-signup">
+                        <form action="#" class="sign-in-form">
+                            <h2 class="title">Sign Up</h2>
+                            <div class="input-field">
+                                <i class="fas fa-user"></i>
+                                <input type="text" value="" class="dataForInput" placeholder="Username" />           <!-----------fields---------->
+                            </div>
+                            <div class="input-field">
+                                <i class="fas fa-user"></i>
+                                <input type="password" value="" class="dataForInput" placeholder="Password" />       <!-----------fields---------->
+                            </div>
+                            <div class="input-field">
+                                <i class="fas fa-user"></i>
+                                <select  class="dropdown dataForInput">
+                                    <option class="secQuest">----Choose Security Question----</option>   <!-----------fields---------->
+                                    <option value={securityQ}>City you were born?</option>
+                                    <option value={securityQ}>Favourite Sport?</option>
+                                    <option value={securityQ}>Pet Name?</option>
+                                    <option value={securityQ}>Favourite Movie?</option>
+                                  </select>
+                            </div>
+                            <div class="input-field">
+                                <i class="fas fa-user"></i>
+                                <input value="" type="text" class="dataForInput" placeholder="Answer" />                 <!-----------fields---------->
+                            </div>
+                                <iframe width="325" height="150" src={navigateTo} name="captchaFrame" onload={captchaLoaded}></iframe>   
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <button class="btn solid bkbt2" onclick={backToPageTwo}>
+                                Back
+                              </button>
+                            <button  class="btn solid subbt">Submit</button>
+        
+                            </form>
+                    </div>
+                </div>
+        
+                <div class="panels-container">
+                    <div class="panel left-panel">
+                        <div class="content">
+                            <img class="logo" src='https://svgshare.com/i/hZm.svg' title='' />
+                            <h2>
+                                Need to edit previous details again?
+                            </h2>
+                            <br>
+                            <h2>
+                                Dont worry we got you!
+                            </h2>
+                            <br>
+                            <h2>
+                                Click on the Back button to go to the previous page.
+                            </h2>
+                            <br>
+                            
+                        </div>
+                        
+                        <img class="image" src='https://svgshare.com/i/h_Q.svg' title='' />
+                    </div>
+                </div>
+            </div>
+            </template>
+
+</template>
